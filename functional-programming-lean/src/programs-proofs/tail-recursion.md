@@ -128,10 +128,6 @@ In other words, a single stack frame can be re-used for each recursive invocatio
 Tail-call elimination is exactly this re-use of the stack frame, and `Tail.sumHelper` is referred to as a _tail-recursive function_.
 -->
 
-The internal helper function calls itself recursively, but it does so in a way where nothing needs to be remembered in order to compute the final result.
-When `Tail.sumHelper` reaches its base case, control can be returned directly to `Tail.sum`, because the intermediate invocations of `Tail.sumHelper` simply return the results of their recursive calls unmodified.
-In other words, a single stack frame can be re-used for each recursive invocation of `Tail.sumHelper`.
-Tail-call elimination is exactly this re-use of the stack frame, and `Tail.sumHelper` is referred to as a _tail-recursive function_.
 内部的辅助函数以递归方式调用自身，但它以一种新的方式执行此操作，无需记住任何内容即可计算最终结果。
 当 `Tail.sumHelper` 达到其基本情况时，控制权可以直接返回到 `Tail.sum`，
 因为 `Tail.sumHelper` 的中间调用只是返回其递归调用的结果，而不会修改结果。
